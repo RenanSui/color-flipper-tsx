@@ -10,15 +10,21 @@ function App() {
 
 	return (
 		<Router>
-			<>
-				<Navbar />
-				<>
-					<Routes>
-            <Route path='/color-flipper-tsx/' element={<Simple />} />
-						<Route path='/color-flipper-tsx/hex' element={<Hex />} />
-					</Routes>
-				</>
-			</>
+			<section className='min-h-screen flex flex-col'>
+					<Navbar />
+					<>
+						<Routes>
+							<Route
+								path='/color-flipper-tsx/'
+								element={<Simple />}
+							/>
+							<Route
+								path='/color-flipper-tsx/hex'
+								element={<Hex />}
+							/>
+						</Routes>
+					</>
+			</section>
 		</Router>
 	);
 }
