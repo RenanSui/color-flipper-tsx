@@ -1,5 +1,9 @@
 const Hex = () => {
-    return 'Hello World';
-}
- 
+	return (
+		<>
+			<p>Hex container</p>
+		</>
+	);
+};
+
 export default Hex;

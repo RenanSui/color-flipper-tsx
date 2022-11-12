@@ -1,5 +1,9 @@
 const Simple = () => {
-    return 'Hello World';
-}
+	return (
+		<>
+			<p>Simple container</p>
+		</>
+	);
+};
 
 export default Simple;
