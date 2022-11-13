@@ -24,7 +24,7 @@
 /* flipper styles */
 
 .flipperContainer {
-    @apply flex w-screen flex-1 flex-col items-center justify-center font-inter;
+    @apply flex w-screen flex-1 flex-col items-center justify-center font-inter transition-all duration-500;
 }
 
 .flipperInfo {
