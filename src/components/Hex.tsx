@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const Hex = () => {
-    const [color, setColor] = useState('');
+    const [color, setColor] = useState('#f8718599');
     const colorPalette = [
         '0',
         '1',
@@ -50,7 +50,7 @@ const Hex = () => {
     return (
         // simple container
         <main
-            className='flipperContainer bg-slate-200'
+            className='flipperContainer bg-red-400'
             style={{ backgroundColor: color && color }}
         >
             {/* simple infos */}
