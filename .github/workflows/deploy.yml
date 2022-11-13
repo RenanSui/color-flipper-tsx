@@ -10,12 +10,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
+
       - name: Install Node.js
         uses: actions/setup-node@v1
         with:
           node-version: 16
-      
+
       - uses: pnpm/action-setup@v2
         name: Install pnpm
         id: pnpm-install
@@ -41,7 +41,6 @@ jobs:
         run: |
           pnpm install
           pnpm run build
-
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

@@ -1,3 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* navbar styles */
+.navbar {
+    @apply relative z-10 items-center bg-white shadow-xl sm:flex;
+}
+
+.navTitle {
+    @apply ml-6 cursor-pointer py-6 text-2xl font-semibold tracking-wide text-cyan-600 transition-all duration-500 hover:text-cyan-900 sm:ml-12 sm:text-4xl;
+}
+
+.navUl {
+    @apply ml-auto flex items-center justify-evenly pr-4 sm:pr-6;
+}
+
+.navLink {
+    @apply font-semibold tracking-wide text-cyan-900 transition-all duration-500 hover:text-cyan-600 sm:text-2xl;
+}
+
+/* flipper styles */
+
+.flipperContainer {
+    @apply flex w-screen flex-1 flex-col items-center justify-center font-inter;
+}
+
+.flipperInfo {
+    @apply relative cursor-pointer rounded-xl bg-gray-900 py-12 px-4 text-slate-200 shadow-2xl  transition-all duration-500 hover:scale-105 hover:bg-gray-800 sm:py-6 sm:px-32;
+}
+
+.flipperBtn {
+    @apply mt-16 rounded-md border-2 border-solid border-gray-900 py-3 px-14 text-xl font-medium tracking-wide text-gray-900 transition-all duration-500 hover:scale-105 hover:bg-gray-900 hover:text-slate-200 sm:text-3xl;
+}
