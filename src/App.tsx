@@ -6,7 +6,6 @@ import Simple from './components/Simple';
 import './main.css';
 
 function App() {
-    const [count, setCount] = useState(0);
 
     return (
         <Router>

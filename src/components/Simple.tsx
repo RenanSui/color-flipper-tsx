@@ -5,17 +5,16 @@ const Simple = () => {
     const colorPalette = ['red', 'aquamarine', 'blanchedalmond', '#ffb8e7'];
 
     // change color variable to random color
-    const randomSimpleColor = (): void => {
-        // function that loop through array until value is not equal
-        const random = () => {
-            let randomColor;
-            do {
-                let random = Math.floor(Math.random() * colorPalette.length);
-                randomColor = colorPalette[random];
-            } while (randomColor === color);
-            return randomColor;
-        };
-        setColor(random());
+    const setRandomSimpleColor = (): void => {
+        let randomColorContainer = null;
+
+        // do while looping array until value is not equal
+        do {
+            let randomNumber = Math.floor(Math.random() * colorPalette.length);
+            randomColorContainer = colorPalette[randomNumber];
+        } while (randomColorContainer === color);
+
+        setColor(randomColorContainer);
     };
 
     // copy to clipboard function
@@ -46,7 +45,7 @@ const Simple = () => {
                 </p>
             </section>
             {/* simple button */}
-            <button className='flipperBtn' onClick={randomSimpleColor}>
+            <button className='flipperBtn' onClick={setRandomSimpleColor}>
                 Click me
             </button>
         </main>

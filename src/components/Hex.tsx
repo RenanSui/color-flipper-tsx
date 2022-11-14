@@ -21,25 +21,20 @@ const Hex = () => {
         'F',
     ];
 
-    // change color variable to random color
-    const randomSimpleColor = (): void => {
-        // function that loop through array until value is not equal
-        const random = () => {
-            // create color container
-            let randomColor = '#';
+    // function that change color variable to random hex color
+    const setRandomHexColor = (): void => {
+        let hexColorContainer = '#';
 
-            // for loop to return random array index
-            for (let i = 0; i <= 7; i++) {
-                let randomNumber = Math.floor(
-                    Math.random() * colorPalette.length,
-                );
-                randomColor += colorPalette[randomNumber];
-            }
-            return randomColor;
-        };
+        // how many digits the hex color will have {3, 6 or 8}
+        const hexColorDigits = 8;
 
-        // set color variable to random
-        setColor(random());
+        // for loop returning random index within color Palette
+        for (let i = 0; i < hexColorDigits; i++) {
+            let randomNumber = Math.floor(Math.random() * colorPalette.length);
+            hexColorContainer += colorPalette[randomNumber];
+        }
+
+        setColor(hexColorContainer);
     };
 
     // copy to clipboard function
@@ -70,7 +65,7 @@ const Hex = () => {
                 </p>
             </section>
             {/* simple button */}
-            <button className='flipperBtn' onClick={randomSimpleColor}>
+            <button className='flipperBtn' onClick={setRandomHexColor}>
                 Click me
             </button>
         </main>
