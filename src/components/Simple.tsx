@@ -4,7 +4,6 @@ const Simple = () => {
     const [color, setColor] = useState('#e2e8f0');
     const colorPalette = ['red', 'aquamarine', 'blanchedalmond', '#ffb8e7'];
 
-    // change color variable to random color
     const setRandomSimpleColor = (): void => {
         let randomColorContainer = null;
 
@@ -17,8 +16,7 @@ const Simple = () => {
         setColor(randomColorContainer);
     };
 
-    // copy to clipboard function
-    const copyColor = () => {
+    const copyToClipboardColor = () => {
         navigator.clipboard.writeText(color);
     };
 
@@ -29,7 +27,7 @@ const Simple = () => {
             style={{ backgroundColor: color && color }}
         >
             {/* simple infos */}
-            <section className='flipperInfo' onClick={copyColor}>
+            <section className='flipperInfo' onClick={copyToClipboardColor}>
                 <p className='pointer-events-none flex flex-col items-center text-3xl font-medium tracking-wide'>
                     Background Color:{' '}
                     <span

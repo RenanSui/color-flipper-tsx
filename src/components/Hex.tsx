@@ -21,15 +21,13 @@ const Hex = () => {
         'F',
     ];
 
-    // function that change color variable to random hex color
     const setRandomHexColor = (): void => {
         let hexColorContainer = '#';
 
-        // how many digits the hex color will have {3, 6 or 8}
-        const hexColorDigits = 8;
+        const hexColorDigitsAmount = 8;
 
         // for loop returning random index within color Palette
-        for (let i = 0; i < hexColorDigits; i++) {
+        for (let i = 0; i < hexColorDigitsAmount; i++) {
             let randomNumber = Math.floor(Math.random() * colorPalette.length);
             hexColorContainer += colorPalette[randomNumber];
         }
@@ -37,8 +35,7 @@ const Hex = () => {
         setColor(hexColorContainer);
     };
 
-    // copy to clipboard function
-    const copyColor = () => {
+    const copyToClipboardColor = () => {
         navigator.clipboard.writeText(color);
     };
 
@@ -49,7 +46,7 @@ const Hex = () => {
             style={{ backgroundColor: color && color }}
         >
             {/* simple infos */}
-            <section className='flipperInfo' onClick={copyColor}>
+            <section className='flipperInfo' onClick={copyToClipboardColor}>
                 <p className='pointer-events-none flex flex-col items-center text-3xl font-medium tracking-wide'>
                     Background Color:{' '}
                     <span
